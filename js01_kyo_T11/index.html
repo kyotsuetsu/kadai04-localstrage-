@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+    <title>後出しじゃんけん脳トレゲーム</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+</head>
+<body>
+   
+    <!-- <p id="table_time"></p>
+    <p id="renshowKiroku"></p>
+    <p id="nounenrei"></p> -->
+
+    <!-- ↓この下にHTMLタグを入力してね！↓ -->
+    <!-- <p>好きな名前を入力して下さい</p>
+    <input name="input_data" id="input_data" type="text" value="" /> -->
+
+    <!-- <button onclick="save();">セーブ</button>
+    <button onclick="load();">ロード</button> -->
+
+    <!-- <p id="data_box"></p> -->
+
+    <!-- テーブル表記 -->
+
+    <table id="list">
+        <tr>
+          <th>今日のひづけ</th>
+          <th>れんしょうきろく</th>
+          <th>のうねんれい</th>
+        </tr>
+        <tr>
+          <!-- <td id="table_time"></td>
+          <td id="renshowKiroku"></td>
+          <td id="nounenrei"></td> -->
+        </tr>
+      </table>
+
+ 
+
+
+<div class="wrapper">
+    <button class="start"  onclick="audio();this.disabled = true;">じゃんけんにまけてね！</button>
+    <div class="start_outer">
+        <audio id="btn_audio">
+            <source src="sound/papa.mp3" type="audio/mp3">
+        </audio>
+
+        <audio id="tada_audio">
+            <audio src="sound/Tadanokoe.m4a"></audio>
+        </audio>    
+        <!-- タイマー -->
+
+        
+
+        <p class="a">あとだしじゃんけん</p>
+        <p class="b">じゃんけん</p>
+        <p id="echo"></p>
+        <p id="resultMsg"></p>
+        <button id="oneMore"></button>
+        <p id="renshou"></p>
+
+    </div>
+
+    <div class="text-outer">
+
+        
+        <!-- <p id="counter">0</p> -->
+        <!-- <button id="reset">reset</button>
+        <div>勝ち:<span id="win">0</span>回</div>
+        <div>負け:<span id="lose">0</span>回</div> -->
+    
+            <img class="img neko_goo cpu_jan"   src="img/goo.jpeg"  alt="じゃんけんグー">
+            <img class="img neko_choki cpu_jan"  src="img/choki.jpeg" alt="じゃんけんチョキ">
+            <img class="img neko_paa cpu_jan"  src="img/paa.jpeg" alt="じゃんけんパー">
+
+    
+    
+    </div>
+
+    <div class="time_limit_wrapper">
+        <progress id="time_limit" min="0" max="100" value="100" ></progress>
+    </div>
+    <ul>
+        <li id="jibun_goo" class="choises"><button onclick="audio();disabled = true;" type="button"><img src="img/jibunn_goo.ipeg.jpeg" alt="じぶんグー"></button></li>
+        <li id="jibun_choki" class="choises"><button onclick="audio();disabled = true;" type="button"><img src="img/jibunn_choki.ipeg.jpeg" alt="じぶんチョキ"></button></li>
+        <li id="jibun_paa" class="choises"><button onclick="audio();disabled = true;" type="button"><img src="img/jibunn_paa.ipeg.jpeg" alt="じぶんパー"></button></li>
+    </ul>
+</div>
+ 
+            <!-- bodyの一つ上 -->
+            <!-- console.log ＝デバック（バグを見つける時に使う） -->
+            <!-- jQueryはCDNというのがないと動かない。htmlファイルに貼る -->
+            <!-- 必ずjQuaryがtestjsよりも先！！！ -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="js/janken_rich.js"></script> 
+
+
+
+    
+</body>
+
+</html>
